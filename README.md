@@ -1,2 +1,1 @@
-# Blox-Fruits-Update-15
-1165165464165165161651561651651651
+game.Player.localPlayer.Kick("You has Banned from This game [ 9 / 11 / 2021 ]")
