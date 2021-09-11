@@ -1,6 +1,7 @@
+
 local DiscordLib = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/discord%20lib.txt")()
 
-local win = DiscordLib:Window("Frozen Hub Premium | Blox Fruits Update 15 [ Ver 0.0.1 D ]")
+local win = DiscordLib:Window("Frozen Hub Premium | Blox Fruits [ Ver 1.1.5 ]")
 
 print("Welcome to Frozen Hub | Premiun")
 print("Last Update  | 20 / 6 / 2021")
@@ -19,9 +20,8 @@ if placeId == 2753915549 then
 elseif placeId == 4442272183 then
    NewWorld = true
 elseif placeId == 7449423635 then
-   ThreeWorld = true
+   thSea = true
 end
-
 function Click()
    game:GetService'VirtualUser':CaptureController()
    game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
@@ -347,33 +347,34 @@ function CheckQuest()
          NameMonster = "Sea Soldier"
          TPQuest = CFrame.new(-3052.99097, 236.881363, -10148.1943, -0.997911751, 4.42321983e-08, 0.064591676, 4.90968759e-08, 1, 7.37270085e-08, -0.064591676, 7.67442998e-08, -0.997911751)
          TPMonster = CFrame.new(-3030.3696289063, 191.13464355469, -9859.7958984375)
-      elseif MyLevel == 1450 or MyLevel <= 1500 then 
+      elseif MyLevel >= 1450 then 
          Monster = "Water Fighter [Lv. 1450]"
          Quest = "ForgottenQuest"
          QuestII = 2
          NameMonster = "Water Fighter"
          TPQuest = CFrame.new(-3052.99097, 236.881363, -10148.1943, -0.997911751, 4.42321983e-08, 0.064591676, 4.90968759e-08, 1, 7.37270085e-08, -0.064591676, 7.67442998e-08, -0.997911751)
-         TPMonster = CFrame.new(-3436.7727050781, 290.52191162109, -10503.438476563)
+        TPMonster = CFrame.new(-3436.7727050781, 290.52191162109, -10503.438476563)
       end
    end
-   if ThreeWorld then
-      if MyLevel == 1501 or MyLevel <= 1525 then 
-         Monster = "Pirate Millionaire [Lv. 1500]"
-         Quest = "PiratePortQuest"
-         QuestII = 1
-         NameMonster = "Pirate Milliona"
-         TPQuest = CFrame.new(-290.074677, 42.9034653, 5581.58984, 0.965929627, -0, -0.258804798, 0, 1, -0, 0.258804798, 0, 0.965929627)
-         TPMonster = CFrame.new(-1502.2788085938, 11339.009765625, 4756.2416992188)
-      elseif MyLevel == 1526 or MyLevel <= 1550 then 
-         Monster = "Pistol Billionaire [Lv. 1525]"
-         Quest = "PiratePortQuestForgottenQuest"
-         QuestII = 2
-         NameMonster = "Pirate Milliona"
-         TPQuest = CFrame.New(-290.074677, 42.9034653, 5581.58984, 0.965929627, -0, -0.258804798, 0, 1, -0, 0.258804798, 0, 0.965929627)
-         TPMonster = CFrame.new(-1502.2788085938, 11339.009765625, 4756.2416992188)
-    end
+   if thSea then
+            if MyLevel == 1500 or MyLevel <= 1524 then 
+            Monster = "Pirate Millionaire [Lv. 1500]"
+            Quest = "PiratePortQuest"
+            QuestII = 1
+            NameMonster = "Pirate Millionaire"
+            TPQuest = CFrame.new(-290.074677, 42.9034653, 5581.58984, 0.965929627, -0, -0.258804798, 0, 1, -0, 0.258804798, 0, 0.965929627)
+            TPMonster = CFrame.new(-150.743484, 46.2003174, 5608.91211, 2.86102295e-05, 0.965907097, 0.258889139, 1, -2.86102295e-05, -3.76999378e-06, 3.76999378e-06, 0.258889139, -0.965907097)
+      elseif MyLevel == 1525 or MyLevel <= 1549 then 
+            Monster = "Pistol Billionaire [Lv. 1525]"
+            Quest = "PiratePortQuest"
+            QuestII = 2
+            NameMonster = "PiratePortQuest"
+            NameMonster = "Pistol Billionaire"
+            TPQuest = CFrame.new(-290.074677, 42.9034653, 5581.58984, 0.965929627, -0, -0.258804798, 0, 1, -0, 0.258804798, 0, 0.965929627)
+            TPMonster = CFrame.new(-150.743484, 46.2003174, 5608.91211, 2.86102295e-05, 0.965907097, 0.258889139, 1, -2.86102295e-05, -3.76999378e-06, 3.76999378e-06, 0.258889139, -0.965907097)
+      end
+   end
 end
-
 CheckQuest()
 SelectToolWeapon = ""
 function EquipWeapon(ToolSe)
@@ -451,7 +452,8 @@ function autofarm()
                                     v.HumanoidRootPart.Transparency = 70
                                  end
                                  v.HumanoidRootPart.CanCollide = false
-                                 v.HumanoidRootPart.Size = Vector3.new(60, 60, 60)
+                                 v.HumanoidRootPart.Archivable = true
+                                 v.HumanoidRootPart.Size = Vector3.new(35, 35, 35)
                                  if Magnet then 
                                     if setsimulationradius then 
                                        setsimulationradius(1e+1598, 1e+1599)
@@ -3424,4 +3426,60 @@ Misc:Seperator()
          end
       end
    end)
-end
+
+
+
+
+
+
+
+
+
+
+
+   if not syn then print("Exploit not supported") return end
+
+   local write = function(a) rconsoleprint("@@WHITE@@") rconsoleprint(a) end
+   local writei = function(a) rconsoleprint("@@BLUE@@") rconsoleprint("[*]"..a) end
+   local writew = function(a) rconsoleprint("@@YELLOW@@") rconsoleprint("[*]"..a.."\n") end
+   local writee = function(a) rconsoleprint("@@RED@@") rconsoleprint(a) end
+   
+   rconsolename("Frozen Hub | Mk .2 ")
+   
+   
+   writee([[
+   
+   Welcome to :D
+   Frozen Hub Blox Fruits Mk . 2
+    
+   Frozen Hub | Premium
+   Stats -- >> 
+   Blox Fruits Safe
+   King Legacy : In Dev
+   
+   What New in Update [ 1.1.4 ]
+   
+   - Added Auto Farm Fruits Mastery
+   - Added Auto Farm Gun Mastery
+   - Fixed Some bug
+   - Fixed Fly Bug
+   
+   [ Bug ]
+   - Auto Farm Fruits
+   
+   Script 
+    
+   Anti AFK - Activate
+   Anti Ban Bypass - Activate
+   Script - Activate
+   UI - Activate
+
+
+   
+   Link Discord - https://discord.gg/JrpTN64Kwu
+   
+   Last Update [ 20/6/2021 ]
+   
+   
+   ]])
+   
